@@ -1,0 +1,39 @@
+def main():
+    #DGD203-AtaGüler-MidTerm
+    #Yaparken ChatGpt'den yardım alınmıştır
+    isim = input("Merhaba! İsminizi öğrenebilir miyim? ")
+
+    
+    print(f"Hoş geldin, {isim}! Şimdi tuttuğun takımı tahmin etmeye çalışacağım.")
+
+    
+    soru1 = input(f"\n{isim}, Tuttuğun takım 1959 öncesi mi kuruldu? (evet/hayır): ").lower()
+    soru2 = input(f"Tuttuğun takım, tarih boyunca Avrupa'da kupa kazandı mı? (evet/hayır): ").lower()
+    soru3 = input(f"Tuttuğun takımın maskotu bir kuş mu? (evet/hayır): ").lower()
+    soru4 = input(f"Tuttuğun takımın stadyumu boğaz kenarında olmasıyla mı meşhur? (evet/hayır): ").lower()
+
+    
+    print("\nCevapların için teşekkürler! Bence sen:")
+
+    
+    if soru1 == 'evet' and soru2 == 'evet' and soru3 == 'hayır' and soru4 == 'hayır':
+        print(f"Sen Galatasaray taraftarı olmalısın, {isim}! Avrupa başarılarını seviyorsun")
+    elif soru1 == 'evet' and soru2 == 'hayır' and soru3 == 'evet' and soru4 == 'evet':
+        print(f"Sen Beşiktaş taraftarı gibi görünüyorsun, {isim}!")
+    elif soru1 == 'hayır' and soru2 == 'hayır' and soru3 == 'hayır' and soru4 == 'hayır':
+        print(f"Sen Trabzonspor taraftarı olmalısın, {isim}!")
+    elif soru1 == 'evet' and soru2 == 'hayır' and soru3 == 'evet' and soru4 == 'hayır':
+        print(f"Fenerbahçe taraftarı olduğunu düşünüyorum, {isim}! Şampiyonluk hayali seninle.")
+    else:
+        print(f"Tahmin edemedim, {isim}! Belki de tuttuğun takım Süper Lig dışında bir takım.")
+
+    
+    if soru2 == 'h':
+        soru5 = input("\nTuttuğun takımın, Şampiyonlar ligi gurplarından çıkmışlığı var mı? (e/h): ").lower()
+        if soru5 == 'evet':
+            print(f"Demek ki takımın global başarıları da önemsiyor ve kesinlikle Fenerbahçe ya da Beşiktaş'tan biri {isim}, takımına başarılar dilerim!")
+        else:
+            print(f"Belki başarılar gelecekte gelir. Takımın için her zaman umut vardır, {isim}!")
+
+if __name__ == "__main__":
+    main()
