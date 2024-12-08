@@ -1,39 +1,65 @@
-def main():
-    #DGD203-AtaGüler-MidTerm
-    #Yaparken ChatGpt'den yardım alınmıştır
-    isim = input("Merhaba! İsminizi öğrenebilir miyim? ")
+using System;
 
-    
-    print(f"Hoş geldin, {isim}! Şimdi tuttuğun takımı tahmin etmeye çalışacağım.")
+class Program
+{
+    static void Main()
+    {
+        // DGD203-AtaGüler-MidTerm
+        // Yaparken ChatGpt'den yardım alınmıştır
 
-    
-    soru1 = input(f"\n{isim}, Tuttuğun takım 1959 öncesi mi kuruldu? (evet/hayır): ").lower()
-    soru2 = input(f"Tuttuğun takım, tarih boyunca Avrupa'da kupa kazandı mı? (evet/hayır): ").lower()
-    soru3 = input(f"Tuttuğun takımın maskotu bir kuş mu? (evet/hayır): ").lower()
-    soru4 = input(f"Tuttuğun takımın stadyumu boğaz kenarında olmasıyla mı meşhur? (evet/hayır): ").lower()
+        Console.Write("Merhaba! İsminizi öğrenebilir miyim? ");
+        string isim = Console.ReadLine();
 
-    
-    print("\nCevapların için teşekkürler! Bence sen:")
+        Console.WriteLine($"\nHoş geldin, {isim}! Şimdi tuttuğun takımı tahmin etmeye çalışacağım.");
 
-    
-    if soru1 == 'evet' and soru2 == 'evet' and soru3 == 'hayır' and soru4 == 'hayır':
-        print(f"Sen Galatasaray taraftarı olmalısın, {isim}! Avrupa başarılarını seviyorsun")
-    elif soru1 == 'evet' and soru2 == 'hayır' and soru3 == 'evet' and soru4 == 'evet':
-        print(f"Sen Beşiktaş taraftarı gibi görünüyorsun, {isim}!")
-    elif soru1 == 'hayır' and soru2 == 'hayır' and soru3 == 'hayır' and soru4 == 'hayır':
-        print(f"Sen Trabzonspor taraftarı olmalısın, {isim}!")
-    elif soru1 == 'evet' and soru2 == 'hayır' and soru3 == 'evet' and soru4 == 'hayır':
-        print(f"Fenerbahçe taraftarı olduğunu düşünüyorum, {isim}! Şampiyonluk hayali seninle.")
-    else:
-        print(f"Tahmin edemedim, {isim}! Belki de tuttuğun takım Süper Lig dışında bir takım.")
+        Console.Write($"\n{isim}, Tuttuğun takım 1959 öncesi mi kuruldu? (evet/hayır): ");
+        string soru1 = Console.ReadLine().ToLower();
 
-    
-    if soru2 == 'h':
-        soru5 = input("\nTuttuğun takımın, Şampiyonlar ligi gurplarından çıkmışlığı var mı? (e/h): ").lower()
-        if soru5 == 'evet':
-            print(f"Demek ki takımın global başarıları da önemsiyor ve kesinlikle Fenerbahçe ya da Beşiktaş'tan biri {isim}, takımına başarılar dilerim!")
-        else:
-            print(f"Belki başarılar gelecekte gelir. Takımın için her zaman umut vardır, {isim}!")
+        Console.Write("Tuttuğun takım, tarih boyunca Avrupa'da kupa kazandı mı? (evet/hayır): ");
+        string soru2 = Console.ReadLine().ToLower();
 
-if __name__ == "__main__":
-    main()
+        Console.Write("Tuttuğun takımın maskotu bir kuş mu? (evet/hayır): ");
+        string soru3 = Console.ReadLine().ToLower();
+
+        Console.Write("Tuttuğun takımın stadyumu boğaz kenarında olmasıyla mı meşhur? (evet/hayır): ");
+        string soru4 = Console.ReadLine().ToLower();
+
+        Console.WriteLine("\nCevapların için teşekkürler! Bence sen:");
+
+        if (soru1 == "evet" && soru2 == "evet" && soru3 == "hayır" && soru4 == "hayır")
+        {
+            Console.WriteLine($"Sen Galatasaray taraftarı olmalısın, {isim}! Avrupa başarılarını seviyorsun");
+        }
+        else if (soru1 == "evet" && soru2 == "hayır" && soru3 == "evet" && soru4 == "evet")
+        {
+            Console.WriteLine($"Sen Beşiktaş taraftarı gibi görünüyorsun, {isim}!");
+        }
+        else if (soru1 == "hayır" && soru2 == "hayır" && soru3 == "hayır" && soru4 == "hayır")
+        {
+            Console.WriteLine($"Sen Trabzonspor taraftarı olmalısın, {isim}!");
+        }
+        else if (soru1 == "evet" && soru2 == "hayır" && soru3 == "evet" && soru4 == "hayır")
+        {
+            Console.WriteLine($"Fenerbahçe taraftarı olduğunu düşünüyorum, {isim}! Şampiyonluk hayali seninle.");
+        }
+        else
+        {
+            Console.WriteLine($"Tahmin edemedim, {isim}! Belki de tuttuğun takım Süper Lig dışında bir takım.");
+        }
+
+        if (soru2 == "hayır")
+        {
+            Console.Write("\nTuttuğun takımın, Şampiyonlar ligi gruplarından çıkmışlığı var mı? (evet/hayır): ");
+            string soru5 = Console.ReadLine().ToLower();
+
+            if (soru5 == "evet")
+            {
+                Console.WriteLine($"Demek ki takımın global başarıları da önemsiyor ve kesinlikle Fenerbahçe ya da Beşiktaş'tan biri {isim}, takımına başarılar dilerim!");
+            }
+            else
+            {
+                Console.WriteLine($"Belki başarılar gelecekte gelir. Takımın için her zaman umut vardır, {isim}!");
+            }
+        }
+    }
+}
